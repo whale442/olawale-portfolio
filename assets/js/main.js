@@ -170,7 +170,7 @@ window.addEventListener('scroll', scrollUp)
 const contactForm = document.getElementById('contact-form'),
       contactName = document.getElementById('contact-name'),
       contactEmail = document.getElementById('contact-email'),
-      contactMessage = document.getElementById('contact-message')
+      contactMessage = document.getElementById('contact-message'),
       contactNotification = document.getElementById('contact-notification')
       
 const sendEmail = (e) => {
@@ -187,12 +187,13 @@ const sendEmail = (e) => {
         contactNotification.textContent = 'Write all the input fields '
     } else {
         // serviceID - templateID - #form -publicKey
-        emailjs.sendForm('service_v8hyc8g', 'template_xe4gomk', '#contact-form', 'pf3zIP2DiF59E2Np5')
+        emailjs.sendForm('service_sxt1ckm', 'template_oupj7sp', '#contact-form', '3JfygYasw30k6LqWb')
+    
             .then(() => {
                 contactNotification.classList.add('color-blue');
                 contactNotification.textContent = 'Message sent successfully ✅'
 
-                //Remove message af five seconds
+                //Remove message at five seconds
                 setTimeout(() => {
                     contactNotification.textContent = ''
                 }, 5000)
